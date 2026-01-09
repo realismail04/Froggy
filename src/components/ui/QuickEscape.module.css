@@ -1,0 +1,35 @@
+.escapeBtn {
+    position: fixed;
+    top: 10px;
+    right: 170px;
+    /* Offset to not overlap with donation button if both right-aligned */
+    z-index: 10000;
+    background-color: var(--quick-exit-red);
+    color: white;
+    padding: 10px 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.escapeBtn:hover {
+    background-color: #b02a37;
+    transform: translateY(-2px);
+}
+
+.escapeBtn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .escapeBtn {
+        right: 10px;
+        top: auto;
+        bottom: 10px;
+        /* Put at bottom on mobile for accessibility? Or top left? */
+        /* Requirement says: Sticky, top-right corner (separate from nav) */
+    }
+}

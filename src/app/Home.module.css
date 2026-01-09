@@ -1,0 +1,116 @@
+.hero {
+    padding: 8rem 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContent {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--calm-blue);
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--slate-grey);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.heroImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.missionSection {
+    padding: 6rem 0;
+    background-color: var(--off-white);
+    text-align: center;
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.missionCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-speed);
+}
+
+.missionCard:hover {
+    transform: translateY(-5px);
+}
+
+.missionCard h3 {
+    color: var(--safe-green);
+    margin-bottom: 1rem;
+}
+
+.ctaSection {
+    padding: 6rem 0;
+    background-color: var(--calm-blue);
+    color: white;
+    text-align: center;
+}
+
+.ctaSection h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.ctaSection p {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btnLarge {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 6rem 0;
+        text-align: center;
+    }
+
+    .heroContent {
+        max-width: 100%;
+    }
+
+    .heroImage {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .missionGrid {
+        grid-template-columns: 1fr;
+    }
+}

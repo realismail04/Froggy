@@ -1,0 +1,25 @@
+:root {
+  /* Brand Colors */
+  --calm-blue: #22577E;
+  --safe-green: #588157;
+  --soft-red: #C94B4B;
+  --gold-accent: #F0B941;
+  --quick-exit-red: #DC3545;
+  --charcoal: #212529;
+  --slate-grey: #495057;
+  --off-white: #F8F9FA;
+
+  /* Accent Variations */
+  --calm-blue-light: #306f9d;
+  --safe-green-light: #6a9668;
+  
+  /* Typography */
+  --font-headings: 'Montserrat', 'Poppins', sans-serif;
+  --font-body: 'Open Sans', 'Lato', 'Roboto', sans-serif;
+  
+  /* Spacing & Sizing */
+  --container-max-width: 1200px;
+  --header-height: 80px;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
