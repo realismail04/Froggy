@@ -2,6 +2,15 @@ import Link from 'next/link';
 import DonationButton from '../ui/DonationButton';
 import styles from './Header.module.css';
 
+const navLinks = [
+    { name: 'About', href: '/about' },
+    { name: 'Reform', href: '/reform' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Training', href: '/training' },
+    { name: 'Impact', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
+];
+
 const Header = () => {
     return (
         <header className={styles.header}>
@@ -14,13 +23,11 @@ const Header = () => {
 
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
-                        <li><Link href="/about">About</Link></li>
-                        <li><Link href="/reform">The Reform</Link></li>
-                        <li><Link href="/resources">Resources</Link></li>
-                        <li><Link href="/training">Training</Link></li>
-                        <li><Link href="/impact">Impact</Link></li>
-                        <li><Link href="/support">Support Us</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
+                        {navLinks.map((link) => (
+                            <li key={link.name}>
+                                <Link href={link.href}>{link.name}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
