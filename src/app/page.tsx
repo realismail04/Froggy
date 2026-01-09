@@ -1,3 +1,6 @@
+"use client";
+
+import React from 'react';
 import Link from 'next/link';
 import styles from './Home.module.css';
 
@@ -8,124 +11,152 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-      {/* Editorial Immersive Hero */}
+      {/* NGO Professional Hero */}
       <section className={styles.hero}>
-        <div
-          className={styles.heroImage}
-          style={{ backgroundImage: `url(${heroImg})` }}
-        />
-        <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <h1>A Safe Hub for Survivors and Professionals</h1>
+          <h1>Supporting children and survivors of institutional abuse.</h1>
           <p>
-            Froggy’s Voice Box is a premium, survivor-led digital sanctuary providing
-            essential resources, legal reform guidance, and a supportive community.
+            Froggy’s Voice Box CIC provides independent, survivor-led support,
+            resources, and advocacy to transform safeguarding across the UK.
           </p>
           <div className={styles.heroActions}>
-            <Link href="/resources" className={styles.btnPrimary}>
-              Access Hub Resources
+            <Link href="/resources" className={`${styles.btnMain} ${styles.btnSolid}`}>
+              How we can help
             </Link>
-            <Link href="/reform" className={styles.btnSecondary} style={{ color: 'white', borderColor: 'rgba(255,255,255,0.5)' }}>
-              Explore the Reform
+            <Link href="/support" className={`${styles.btnMain} ${styles.btnOutline}`}>
+              Ways to support us
             </Link>
           </div>
         </div>
+        <div
+          className={styles.heroBg}
+          style={{ backgroundImage: `url(${heroImg})` }}
+        />
       </section>
 
-      {/* Narrative Flow - Overlapping Introduction */}
-      <section className={styles.narrativeSection}>
+      {/* Audience Buckets - "How can we help?" */}
+      <section className={styles.bucketsSection}>
         <div className={styles.container}>
-          <div className={styles.overlapCard}>
-            <div className={styles.textContent}>
-              <h2>Survivor-Led Authority in Safeguarding</h2>
-              <p>
-                We believe the way a child shows abuse is as critical as the disclosure itself.
-                Our platform bridges the gap between fear and understanding, providing a
-                structured environment for families and agencies.
-              </p>
-              <div className={styles.traumaAccent}>
-                "The disclosure is simple. The adult response is where the safety begins."
+          <div className={styles.sectionHeader}>
+            <h2>How can we help you?</h2>
+            <p>Select your path to access tailored support and resources.</p>
+          </div>
+          <div className={styles.bucketGrid}>
+            <div className={styles.bucketCard}>
+              <div>
+                <span className={styles.bucketIcon}>🤝</span>
+                <h3>For Survivors</h3>
+                <p>Access independent support, guidance on disclosures, and our survivor-led community safe-spaces.</p>
               </div>
-              <p>
-                As a Community Interest Company, we are dedicated to reinvesting
-                our expertise into national standards and community presence.
-              </p>
-              <Link href="/about" className={styles.btnSecondary}>
-                Learn More About Us
-              </Link>
+              <Link href="/resources" className={styles.btnGhost}>Get support</Link>
             </div>
-            <div
-              className={styles.imageBox}
-              style={{ backgroundImage: `url(${abstractImg})` }}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* High-Authority Impact Bar */}
-      <section className={styles.impactBar}>
-        <div className={styles.container}>
-          <div className={styles.impactGrid}>
-            <div className={styles.impactItem}>
-              <h3>100%</h3>
-              <p>Survivor Informed</p>
+            <div className={styles.bucketCard}>
+              <div>
+                <span className={styles.bucketIcon}>🏠</span>
+                <h3>For Families</h3>
+                <p>Practical resources for parents and carers to help navigate safeguarding concerns with confidence.</p>
+              </div>
+              <Link href="/resources" className={styles.btnGhost}>Access resources</Link>
             </div>
-            <div className={styles.impactItem}>
-              <h3>5 Steps</h3>
-              <p>Standardized Reform</p>
-            </div>
-            <div className={styles.impactItem}>
-              <h3>∞</h3>
-              <p>Compassionate Safety</p>
+            <div className={styles.bucketCard}>
+              <div>
+                <span className={styles.bucketIcon}>🎓</span>
+                <h3>For Professionals</h3>
+                <p>Advanced safeguarding training and the Froggy’s Law reform model for educational and social settings.</p>
+              </div>
+              <Link href="/training" className={styles.btnGhost}>View training</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Reform Model Strip */}
-      <section className={styles.reformStrip}>
-        <div className={styles.container}>
-          <div className={styles.overlapCard} style={{ background: 'transparent', boxShadow: 'none', padding: 0 }}>
-            <div
-              className={styles.imageBox}
-              style={{ backgroundImage: `url(${vanImg})`, minHeight: '450px' }}
-            />
-            <div className={styles.textContent}>
-              <h2 style={{ color: 'white' }}>The Reform: Froggy’s Law</h2>
-              <p style={{ color: 'rgba(255,255,255,0.8)' }}>
-                Beyond the hub, we are driving structural change in UK safeguarding
-                through Froggy’s Law—a mandated, trauma-informed pathway for professional responses.
-              </p>
-              <p style={{ color: 'rgba(255,255,255,0.8)' }}>
-                Our model replaces inconsistent practices with a clear, emotional
-                safety standard that protects children and empowers practitioners.
-              </p>
-              <Link href="/reform" className={styles.btnPrimary} style={{ background: 'var(--accent-gold)', color: 'var(--neutral-900)', border: 'none' }}>
-                View The Reform Pathway
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final Action - Glassmorphism CTA */}
-      <section className={styles.supportSection}>
-        <div className={styles.container}>
-          <div className={styles.glassCard}>
-            <h2>Join the Movement</h2>
+      {/* Mission Narrative - Why we help */}
+      <section className={styles.container}>
+        <div className={styles.impactSection}>
+          <div
+            className={styles.imageSide}
+            style={{ backgroundImage: `url(${abstractImg})` }}
+          />
+          <div className={styles.contentSide}>
+            <h2>Why Froggy’s Voice Box exists</h2>
             <p>
-              Your engagement helps us scale our community projects and deliver
-              professional training that saves lives. Let’s create a safer
-              future together.
+              Traditional safeguarding often fails because it lacks the nuance
+              of survivor experience. We bridge that gap by providing
+              trauma-informed, independent oversight that ensures every
+              disclosure is met with the correct, mandated response.
             </p>
-            <div className={styles.heroActions}>
-              <Link href="/support" className={styles.btnPrimary}>
-                Support the CIC
-              </Link>
-              <Link href="/contact" className={styles.btnSecondary}>
-                Partner With Us
-              </Link>
+            <p>
+              Our mobile safe-spaces and digital resources are designed to be
+              emotionally safe, providing a sanctuary for information where
+              disclosure is the beginning of a safe journey, not a moment of crisis.
+            </p>
+            <Link href="/about" className={`${styles.btnMain} ${styles.btnSolid}`} style={{ background: 'var(--calm-blue)', color: 'white' }}>
+              Read our mission
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Quote - Trust & Authority */}
+      <section className={styles.quoteSection}>
+        <div className={styles.quoteContainer}>
+          <p className={styles.quoteText}>
+            "The way a child shows abuse is as important as the disclosure itself.
+            We are here to ensure that when they speak, the world finally knows how to listen."
+          </p>
+          <div className={styles.quoteAuthor}>
+            <div className={styles.authorInfo}>
+              <h4>Froggy</h4>
+              <p>Founder, Froggy’s Voice Box CIC</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reform Hub - Side Stripe (AFI Inspired) */}
+      <div style={{ background: 'var(--neutral-100)', padding: '4rem 0' }}>
+        <div className={styles.container}>
+          <div className={styles.impactSection} style={{ padding: 0 }}>
+            <div className={styles.contentSide}>
+              <h2>A new standard: Froggy’s Law</h2>
+              <p>
+                We aren't just a support hub; we are a reform movement.
+                Froggy’s Law is our proposed five-step safeguarding pathway
+                designed to mandate trauma-informed professional responses
+                across the UK.
+              </p>
+              <Link href="/reform" className={styles.btnGhost}>Explore the reform model</Link>
+            </div>
+            <div
+              className={styles.imageSide}
+              style={{ backgroundImage: `url(${vanImg})` }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Latest & Impact - Grid */}
+      <section className={styles.newsSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2>Latest from the hub</h2>
+          </div>
+          <div className={styles.newsGrid}>
+            <Link href="/projects" className={styles.newsCard}>
+              <div className={styles.newsImage} style={{ backgroundImage: `url(${vanImg})` }} />
+              <span>Project Update</span>
+              <h4>The Mobile SAFE-Space Van Launching in 2026</h4>
+            </Link>
+            <Link href="/training" className={styles.newsCard}>
+              <div className={styles.newsImage} style={{ backgroundImage: `url(${heroImg})` }} />
+              <span>Training</span>
+              <h4>Professional Safeguarding Workshops: Autumn Intake</h4>
+            </Link>
+            <Link href="/resources" className={styles.newsCard}>
+              <div className={styles.newsImage} style={{ backgroundImage: `url(${abstractImg})` }} />
+              <span>Resources</span>
+              <h4>New Guidance for Foster Carers and Schools</h4>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,298 +1,308 @@
 .home {
-    overflow-x: hidden;
-    background-color: var(--neutral-100);
+    background-color: #fff;
+    color: var(--neutral-900);
 }
 
-/* Immersive Hero Section */
+/* Professional NGO Hero */
 .hero {
-    height: 100vh;
     position: relative;
+    height: 80vh;
+    min-height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
     background-color: var(--neutral-900);
-}
-
-.heroImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    transform: scale(1.1);
-    /* Foundation for scroll scale */
-    transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.heroOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.4) 0%,
-            rgba(0, 0, 0, 0.2) 60%,
-            var(--neutral-100) 100%);
-    z-index: 2;
+    overflow: hidden;
 }
 
 .heroContent {
     position: relative;
-    z-index: 3;
-    max-width: 1100px;
+    z-index: 10;
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
     padding: 0 2rem;
-    text-align: center;
+    color: white;
 }
 
 .heroContent h1 {
-    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 800;
-    line-height: 0.95;
+    line-height: 1.1;
+    max-width: 800px;
     margin-bottom: 2rem;
-    color: white;
-    letter-spacing: -0.04em;
-    animation: textAppear 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    letter-spacing: -0.02em;
 }
 
 .heroContent p {
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
-    font-weight: 400;
+    font-size: 1.4rem;
     line-height: 1.5;
-    margin-bottom: 3.5rem;
+    max-width: 600px;
+    margin-bottom: 3rem;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeIn 1.5s ease-out 0.5s both;
 }
 
 .heroActions {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
-    animation: fadeIn 1.5s ease-out 0.8s both;
 }
 
-/* Overlapping Narrative Sections */
-.narrativeSection {
-    padding: 0 0 10rem;
-    margin-top: -15vh;
-    /* Create the overlap with hero */
-    position: relative;
-    z-index: 10;
+.heroBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
 }
 
-.overlapCard {
-    background: white;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
-    padding: 6rem;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
-    align-items: center;
-    margin-bottom: 6rem;
+/* Audience Buckets (How we help) */
+.bucketsSection {
+    padding: 6rem 0;
+    background-color: var(--neutral-100);
 }
 
-.textContent h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.8rem;
     font-weight: 800;
     color: var(--neutral-900);
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
 }
 
-.textContent p {
-    font-size: 1.25rem;
-    line-height: 1.8;
+.bucketGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.bucketCard {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid var(--calm-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bucketCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.bucketIcon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.bucketCard h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--neutral-900);
+}
+
+.bucketCard p {
+    font-size: 1.1rem;
     color: var(--neutral-600);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Impact / Why we help */
+.impactSection {
+    padding: 8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.imageSide {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+}
+
+.contentSide h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--neutral-900);
+}
+
+.contentSide p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--neutral-700);
     margin-bottom: 2.5rem;
 }
 
-.traumaAccent {
-    border-left: 8px solid var(--accent-gold);
-    padding-left: 2.5rem;
-    margin: 4rem 0;
-    font-style: italic;
-    font-size: 1.6rem;
-    color: var(--neutral-900);
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-.imageBox {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    height: 100%;
-    min-height: 500px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: var(--shadow-xl);
-}
-
-/* Authority / Impact Bar */
-.impactBar {
-    background: white;
-    border-top: 1px solid var(--neutral-200);
-    border-bottom: 1px solid var(--neutral-200);
-    padding: 5rem 0;
-    margin-bottom: 8rem;
-}
-
-.impactGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+/* Quote Section */
+.quoteSection {
+    background-color: var(--neutral-900);
+    color: white;
+    padding: 10rem 0;
     text-align: center;
 }
 
-.impactItem h3 {
-    font-size: 3.5rem;
-    font-weight: 800;
+.quoteContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.quoteText {
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+}
+
+.quoteAuthor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.authorInfo h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
     color: var(--accent-gold);
+}
+
+.authorInfo p {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+/* Latest Grid */
+.newsSection {
+    padding: 8rem 0;
+}
+
+.newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.newsCard {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsImage {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.newsCard:hover .newsImage {
+    transform: scale(1.02);
+}
+
+.newsCard span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--calm-blue);
+    text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
 
-.impactItem p {
+.newsCard h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Buttons - NGO Standard */
+.btnMain {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-weight: 800;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--neutral-500);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-/* High-Authority Reform Section */
-.reformStrip {
-    background-color: var(--neutral-900);
-    color: white;
-    padding: 8rem 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.reformStrip .textContent h2 {
-    color: white;
-}
-
-.reformStrip .textContent p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Glassmorphism CTAs */
-.supportSection {
-    padding: 12rem 0;
-    background-color: var(--neutral-100);
     text-align: center;
 }
 
-.glassCard {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--border-radius-lg);
-    padding: 8rem 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-shadow: var(--shadow-xl);
-}
-
-.glassCard h2 {
-    font-size: 4rem;
-    font-weight: 800;
+.btnSolid {
+    background-color: var(--accent-gold);
     color: var(--neutral-900);
-    margin-bottom: 2rem;
-    letter-spacing: -0.03em;
 }
 
-/* Buttons - Premium Finish */
-.btnPrimary {
-    padding: 20px 50px;
-    background: var(--neutral-900);
+.btnSolid:hover {
+    background-color: #fbc02d;
+    transform: translateY(-2px);
+}
+
+.btnOutline {
+    border: 2px solid white;
     color: white;
-    font-weight: 700;
-    border-radius: 100px;
-    /* Pill shape */
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--neutral-900);
 }
 
-.btnPrimary:hover {
-    background: white;
+.btnOutline:hover {
+    background-color: white;
     color: var(--neutral-900);
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.btnSecondary {
-    padding: 20px 50px;
-    background: transparent;
-    color: var(--neutral-900);
+.btnGhost {
+    color: var(--calm-blue);
     font-weight: 700;
-    border-radius: 100px;
     text-decoration: none;
-    font-size: 1.1rem;
-    border: 2px solid var(--neutral-900);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.btnSecondary:hover {
-    background: var(--neutral-900);
-    color: white;
-    transform: translateY(-4px);
+.btnGhost:after {
+    content: "→";
 }
 
-/* Animations */
-@keyframes textAppear {
-    from {
-        opacity: 0;
-        transform: translateY(60px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Mobile Adjustments */
 @media (max-width: 1024px) {
-    .overlapCard {
+
+    .bucketGrid,
+    .newsGrid {
         grid-template-columns: 1fr;
-        padding: 4rem 2rem;
     }
 
-    .imageBox {
-        min-height: 350px;
-        order: -1;
+    .hero {
+        height: auto;
+        padding: 6rem 0;
     }
 
-    .impactGrid {
+    .heroBg {
+        display: none;
+    }
+
+    .impactSection {
         grid-template-columns: 1fr;
-        gap: 3rem;
     }
 
-    .glassCard h2 {
+    .heroContent h1 {
         font-size: 2.5rem;
     }
 }
