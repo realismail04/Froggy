@@ -1,0 +1,166 @@
+.interior {
+    background-color: #fff;
+    color: var(--neutral-900);
+    overflow-x: hidden;
+}
+
+/* Sub-Hero Signature */
+.subHero {
+    position: relative;
+    padding: 8rem 0;
+    background-color: var(--neutral-900);
+    overflow: hidden;
+}
+
+.subHeroContent {
+    position: relative;
+    z-index: 20;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: white;
+}
+
+.subHeroContent h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.04em;
+    animation: slideUpFade 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.subHeroContent p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    animation: slideUpFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
+}
+
+.subHeroVisual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0.4;
+}
+
+.subHeroImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Narrative Grid - Interior Version */
+.narrativeSection {
+    padding: 10rem 0;
+}
+
+.narrativeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.narrativeContent h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.03em;
+}
+
+.narrativeContent p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--neutral-600);
+    margin-bottom: 2rem;
+}
+
+.narrativeImage {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+}
+
+.narrativeImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Category/Step Grid */
+.gridSection {
+    padding: 8rem 0;
+    background-color: var(--neutral-100);
+}
+
+.gridContent {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    background: white;
+    padding: 4rem;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--neutral-200);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* Animations */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .narrativeGrid,
+    .cardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .subHeroVisual {
+        display: none;
+    }
+
+    .subHeroContent {
+        text-align: center;
+    }
+}
