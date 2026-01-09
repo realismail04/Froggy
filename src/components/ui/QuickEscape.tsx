@@ -11,11 +11,13 @@ const QuickEscape = () => {
     return (
         <button
             onClick={handleEscape}
-            className={styles.escapeBtn}
-            aria-label="Quick Escape: Instantly leave this site and go to BBC"
-            title="Quick Escape"
+            className={styles.escapeContainer}
+            aria-label="Quick Escape: Instantly leave this site"
         >
-            Quick Escape
+            <div className={styles.iconBox}>
+                <span className={styles.closeIcon}>×</span>
+            </div>
+            <span className={styles.expandText}>Quick Exit</span>
         </button>
     );
 };

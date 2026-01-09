@@ -3,44 +3,56 @@ import styles from '../../Home.module.css';
 export default function Privacy() {
     return (
         <div className={styles.home}>
-            {/* Hero-like Intro */}
-            <section className={styles.hero} style={{ minHeight: '30vh', padding: '10rem 0 5rem' }}>
-                <div className="container">
-                    <div className={styles.heroContent}>
-                        <h1 className="text-calm">Privacy Policy</h1>
-                        <p style={{ fontSize: '1.4rem' }}>
-                            How we manage and protect personal information.
-                        </p>
-                    </div>
+            {/* Premium Hero - Minimal */}
+            <section className={styles.hero} style={{ minHeight: '40vh', background: 'var(--neutral-900)' }}>
+                <div className={styles.heroOverlay} />
+                <div className={styles.heroContent}>
+                    <h1>Privacy Policy</h1>
+                    <p>How we manage and protect personal information.</p>
                 </div>
             </section>
 
-            {/* Main Content */}
-            <section className={`${styles.introSection} ${styles.voiceBoxSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
+            {/* Policy Content */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.textContent} style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <h2>Introduction</h2>
                         <p>
-                            Our privacy policy explains how we collect, store, and use personal data in
-                            line with UK GDPR and data protection laws. We are committed to transparency
-                            and responsible data handling.
+                            Froggy’s Voice Box CIC is committed to protecting the privacy and
+                            security of your personal information. This privacy policy describes
+                            how we collect and use personal data about you during and after your
+                            working relationship with us, in accordance with the UK General Data
+                            Protection Regulation (UK GDPR).
                         </p>
 
-                        <h2 style={{ marginTop: '3rem' }}>Information Collection</h2>
+                        <h3>Information Collection</h3>
                         <p>
-                            We collect minimal information necessary for our services, such as names and email
-                            addresses provided via our contact form or donation links.
+                            We collect minimal information necessary for our services, such as
+                            names and email addresses provided via our contact form or donation
+                            links. We do not use tracking cookies for marketing purposes.
                         </p>
 
-                        <h2 style={{ marginTop: '3rem' }}>Data Storage</h2>
+                        <h3>Data Storage & Security</h3>
                         <p>
-                            Your information is stored securely and is only accessible to authorised personnel
-                            within Froggy’s Voice Box CIC.
+                            Your information is stored securely on encrypted servers and is only
+                            accessible to authorised personnel within Froggy’s Voice Box CIC who
+                            require access to perform their duties.
                         </p>
 
-                        <h2 style={{ marginTop: '3rem' }}>Your Rights</h2>
+                        <div className={styles.traumaAccent}>
+                            We never sell or share your personal data with third parties for
+                            marketing purposes.
+                        </div>
+
+                        <h3>Your Rights</h3>
                         <p>
-                            Under UK GDPR, you have the right to access, rectify, or erase your personal data.
-                            Please contact us if you have any concerns regarding your privacy.
+                            Under UK GDPR, you have the right to access, rectify, or erase your
+                            personal data. You also have the right to restrict or object to the
+                            processing of your data.
+                        </p>
+                        <p>
+                            Please contact us at <strong>client@haxotech.com</strong> if you have
+                            any concerns regarding your privacy or wish to exercise your rights.
                         </p>
                     </div>
                 </div>

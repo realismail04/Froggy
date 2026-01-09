@@ -2,83 +2,82 @@ import Link from 'next/link';
 import styles from '../Home.module.css';
 
 export default function Training() {
+    const abstractImg = "/supportive_community_abstract_1767979159722.png";
+
     return (
         <div className={styles.home}>
-            {/* Hero-like Intro */}
-            <section className={styles.hero} style={{ minHeight: '40vh', padding: '10rem 0 5rem' }}>
-                <div className="container">
-                    <div className={styles.heroContent}>
-                        <h1 className="text-calm">Survivor-Led Training for Professionals</h1>
-                        <p style={{ fontSize: '1.4rem' }}>
-                            Practical guidance shaped by lived experience.
-                        </p>
-                    </div>
+            {/* Premium Hero - Minimal */}
+            <section className={styles.hero} style={{ minHeight: '50vh', background: 'var(--calm-blue-dark)' }}>
+                <div className={styles.heroOverlay} />
+                <div className={styles.heroContent}>
+                    <h1>Professional Training & Workshops</h1>
+                    <p>
+                        Survivor-led guidance shaped by lived experience.
+                        Empowering professionals to respond with clarity and care.
+                    </p>
                 </div>
             </section>
 
-            {/* Main Context */}
-            <section className={`${styles.introSection} ${styles.lawSection}`}>
-                <div className="container">
+            {/* Training Hub Split */}
+            <section className={`${styles.section} ${styles.voiceBoxSection}`}>
+                <div className={styles.container}>
                     <div className={styles.sectionContent}>
-                        <h2>Professional Safeguarding Training</h2>
-                        <p>
-                            Froggy’s Voice Box CIC delivers survivor-informed training for schools, social care,
-                            police, youth services, and community organisations. All training is grounded in
-                            lived experience and trauma-informed practice.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Training Modules */}
-            <section className={`${styles.introSection} ${styles.voiceBoxSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
-                        <h2>Our Core Training Modules</h2>
-                        <div style={{ display: 'grid', gap: '3rem', marginTop: '3rem' }}>
-                            <div style={{ padding: '2.5rem', background: 'var(--white)', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-sm)' }}>
-                                <h3 style={{ color: 'var(--safe-green)', marginBottom: '1rem' }}>1. Understanding Child Disclosure</h3>
-                                <p style={{ fontSize: '1.1rem' }}>A deep dive into how children show abuse in real life. Learn why children show the way they do, common barriers, and how to recognise indirect disclosures.</p>
-                            </div>
-                            <div style={{ padding: '2.5rem', background: 'var(--white)', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-sm)' }}>
-                                <h3 style={{ color: 'var(--safe-green)', marginBottom: '1rem' }}>2. Safe First-Response Protocol</h3>
-                                <p style={{ fontSize: '1.1rem' }}>A simple framework guiding adults through the first moments of a disclosure. Learn what to say, what not to say, and how to avoid leading questions.</p>
-                            </div>
-                            <div style={{ padding: '2.5rem', background: 'var(--white)', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-sm)' }}>
-                                <h3 style={{ color: 'var(--safe-green)', marginBottom: '1rem' }}>3. Trauma-Informed Communication</h3>
-                                <p style={{ fontSize: '1.1rem' }}>How to communicate in ways that reduce harm and build trust. Covers tone, body language, and maintaining compassionate boundaries.</p>
+                        <div className={styles.textContent}>
+                            <h2>Survivor-Informed Excellence</h2>
+                            <p>
+                                Froggy’s Voice Box CIC delivers professional training for schools,
+                                social care, police, and community organisations. Our workshops
+                                bridge the gap between legal requirements and emotional safety.
+                            </p>
+                            <div className={styles.traumaAccent}>
+                                We provide the practical tools needed to recognise indirect
+                                disclosures and maintain trauma-informed boundaries.
                             </div>
                         </div>
+                        <div
+                            className={styles.imageBox}
+                            style={{ backgroundImage: `url(${abstractImg})` }}
+                        />
                     </div>
                 </div>
             </section>
 
-            {/* Outcomes */}
-            <section className={`${styles.introSection} ${styles.lawSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
-                        <h2>Outcomes & Benefits</h2>
-                        <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.2rem', lineHeight: '2' }}>
-                            <li>🌿 Confidence in responding to disclosures</li>
-                            <li>🌿 Practical trauma-informed communication skills</li>
-                            <li>🌿 Standardised framework for your organisation</li>
-                            <li>🌿 Improved outcomes for children in your care</li>
-                        </ul>
+            {/* Core Modules - Premium List */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+                        <h2 style={{ fontSize: '3rem', color: 'var(--calm-blue-dark)' }}>Core Training Modules</h2>
+                    </div>
+
+                    <div style={{ display: 'grid', gap: '3rem' }}>
+                        {[
+                            { id: "01", title: "Understanding Child Disclosure", desc: "A deep dive into how children show abuse in real life. Learn why children show the way they do, common barriers, and how to recognise indirect disclosures." },
+                            { id: "02", title: "Safe First-Response Protocol", desc: "A simple framework guiding adults through the first moments of a disclosure. Learn what to say, what not to say, and how to avoid leading questions." },
+                            { id: "03", title: "Trauma-Informed Communication", desc: "How to communicate in ways that reduce harm and build trust. Covers tone, body language, and maintaining compassionate boundaries." }
+                        ].map((item, i) => (
+                            <div key={i} style={{ display: 'flex', gap: '3rem', padding: '3rem', background: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', alignItems: 'center' }}>
+                                <span style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--neutral-300)' }}>{item.id}</span>
+                                <div>
+                                    <h3 style={{ fontSize: '1.8rem', color: 'var(--calm-blue-dark)', marginBottom: '1rem' }}>{item.title}</h3>
+                                    <p style={{ fontSize: '1.1rem', color: 'var(--neutral-700)', lineHeight: '1.7' }}>{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA */}
+            {/* Training CTA */}
             <section className={styles.supportSection}>
-                <div className="container">
+                <div className={styles.container}>
                     <div className={styles.supportContent}>
-                        <h2>Enquire About Training</h2>
+                        <h2>Enquire About Sessions</h2>
                         <p>
-                            To request a session or learn more about our workshop formats,
-                            please get in touch. We offer both online and in-person sessions.
+                            To request a workshop or learn more about our online and in-person formats,
+                            please get in touch with our team.
                         </p>
-                        <Link href="/contact" className={styles.btnGentle}>
-                            Contact Us
+                        <Link href="/contact" className={styles.btnPrimary}>
+                            Contact for Enquiries
                         </Link>
                     </div>
                 </div>

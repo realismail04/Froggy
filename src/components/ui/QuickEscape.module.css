@@ -1,43 +1,80 @@
-.escapeBtn {
+.escapeContainer {
     position: fixed;
-    top: 20px;
-    right: 180px;
-    z-index: 10000;
-    background-color: var(--quick-exit-red);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: var(--quick-exit-red);
     color: white;
-    padding: 12px 24px;
+    border: none;
+    border-radius: 40px 0 0 40px;
+    cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.3s ease;
+    box-shadow: -4px 0 15px rgba(227, 93, 93, 0.3);
+}
+
+.escapeContainer:hover {
+    width: 160px;
+    background: #c94b4b;
+}
+
+.iconBox {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.closeIcon {
+    font-weight: 300;
+    line-height: 1;
+}
+
+.expandText {
+    white-space: nowrap;
+    font-size: 0.9rem;
     font-weight: 700;
-    border-radius: var(--border-radius);
-    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3);
-    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    transition: all var(--transition-bounce);
-    border: 2px solid transparent;
+    letter-spacing: 0.05em;
+    padding-right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
 }
 
-.escapeBtn:hover {
-    background-color: #b02a37;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(220, 53, 69, 0.4);
+.escapeContainer:hover .expandText {
+    opacity: 1;
 }
 
-.escapeBtn:active {
-    transform: translateY(-1px);
-}
-
-.escapeBtn:focus-visible {
-    outline: 3px solid white;
-    outline-offset: 2px;
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-@media (max-width: 1100px) {
-    .escapeBtn {
-        right: 20px;
-        top: auto;
+@media (max-width: 768px) {
+    .escapeContainer {
         bottom: 20px;
-        padding: 10px 20px;
-        font-size: 0.75rem;
+        top: auto;
+        transform: none;
+        border-radius: 30px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .escapeContainer:hover {
+        width: 44px;
+        /* Disable expansion on mobile for safety/space */
+    }
+
+    .iconBox {
+        min-width: 44px;
+        height: 44px;
+    }
+
+    .expandText {
+        display: none;
     }
 }

@@ -2,80 +2,90 @@ import Link from 'next/link';
 import styles from '../Home.module.css';
 
 export default function Projects() {
+    const vanImg = "/safeguarding_van_safespace_1767979144119.png";
+    const abstractImg = "/supportive_community_abstract_1767979159722.png";
+
     return (
         <div className={styles.home}>
-            {/* Hero-like Intro */}
-            <section className={styles.hero} style={{ minHeight: '40vh', padding: '10rem 0 5rem' }}>
-                <div className="container">
-                    <div className={styles.heroContent}>
-                        <h1 className="text-calm">Our Projects and Impact</h1>
-                        <p style={{ fontSize: '1.4rem' }}>
-                            Real-world action driven by lived experience.
-                        </p>
+            {/* Premium Hero - Minimal */}
+            <section className={styles.hero} style={{ minHeight: '50vh', background: 'var(--calm-blue-dark)' }}>
+                <div className={styles.heroOverlay} />
+                <div className={styles.heroContent}>
+                    <h1>Our Projects & Impact</h1>
+                    <p>
+                        Real-world action driven by lived experience.
+                        Improving safeguarding practice through community-led movement.
+                    </p>
+                </div>
+            </section>
+
+            {/* Safeguarding Van Premium Split */}
+            <section className={`${styles.section} ${styles.voiceBoxSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.sectionContent}>
+                        <div className={styles.textContent}>
+                            <h2>The Safeguarding Van Project</h2>
+                            <p>
+                                A mobile sanctuary designed to bring expert support directly to
+                                children, families, and professionals in their own communities.
+                            </p>
+                            <div className={styles.traumaAccent}>
+                                Our van travels across the UK, providing on-the-ground awareness and
+                                direct access to survivor-informed resources.
+                            </div>
+                            <p>
+                                From school visits to community festivals, the van acts as a visible
+                                sign of safety, encouraging conversations that might otherwise
+                                remain unspoken.
+                            </p>
+                        </div>
+                        <div
+                            className={styles.imageBox}
+                            style={{ backgroundImage: `url(${vanImg})` }}
+                        />
                     </div>
                 </div>
             </section>
 
-            {/* Intro Context */}
-            <section className={`${styles.introSection} ${styles.lawSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
-                        <h2>Community-Driven Movement</h2>
-                        <p>
-                            Froggy’s Voice Box CIC is more than a hub — it is an active, community-driven
-                            movement. Our projects focus on improving safeguarding practice, supporting
-                            survivors, and creating safer environments for children to speak out.
-                        </p>
+            {/* Impact Stats Grid */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+                        <h2 style={{ fontSize: '3rem', color: 'var(--calm-blue-dark)' }}>Our Core Outcomes</h2>
                     </div>
-                </div>
-            </section>
 
-            {/* Safeguarding Van */}
-            <section className={`${styles.introSection} ${styles.voiceBoxSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
-                        <h2>1. Safeguarding Van Project</h2>
-                        <p><strong>A Mobile Safe-Space for Children and Families</strong></p>
-                        <p>
-                            The safeguarding van is a community-based initiative designed to bring support
-                            directly to children, families, and professionals. It provides a calm, accessible
-                            environment where safeguarding conversations can take place safely.
-                        </p>
-                        <div style={{ padding: '2rem', background: 'var(--white)', borderRadius: 'var(--border-radius)', marginTop: '2rem' }}>
-                            <ul style={{ listStyle: 'none', padding: 0, lineHeight: '2' }}>
-                                <li>🚛 A mobile safe-space for outreach</li>
-                                <li>🚛 Visits to schools and community events</li>
-                                <li>🚛 On-the-ground safeguarding awareness</li>
-                                <li>🚛 Direct access to survivor-informed resources</li>
-                            </ul>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
+                        <div style={{ padding: '3rem', background: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', textAlign: 'center' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>📈</div>
+                            <h3 style={{ marginBottom: '1rem' }}>National Reform</h3>
+                            <p>Establishing Froggy’s Law as the national standard for child disclosure pathways.</p>
+                        </div>
+                        <div style={{ padding: '3rem', background: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', textAlign: 'center' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>🚜</div>
+                            <h3 style={{ marginBottom: '1rem' }}>Community Outreach</h3>
+                            <p>Reaching thousands of families annually through our mobile safeguarding hub.</p>
+                        </div>
+                        <div style={{ padding: '3rem', background: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', textAlign: 'center' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>🎓</div>
+                            <h3 style={{ marginBottom: '1rem' }}>Professional Upskilling</h3>
+                            <p>Training thousands of professionals in trauma-informed safeguarding responses.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Community Engagement */}
-            <section className={`${styles.introSection} ${styles.lawSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
-                        <h2>2. Community Engagement</h2>
-                        <p>
-                            Froggy’s Voice Box regularly engages with communities to raise awareness about child
-                            disclosure, emotional safety, and reform through talks, awareness campaigns, and
-                            survivor-led storytelling.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Impact Outcomes */}
+            {/* Join Impact CTA */}
             <section className={styles.supportSection}>
-                <div className="container">
-                    <div className={styles.sectionContent} style={{ textAlign: 'center' }}>
-                        <h2>Impact & Outcomes</h2>
-                        <p style={{ fontSize: '1.3rem', color: 'var(--calm-blue)', fontWeight: '600' }}>
-                            Increased awareness. Stronger safeguarding in schools.
-                            More emotionally safe environments. A growing national movement for change.
+                <div className={styles.container}>
+                    <div className={styles.supportContent}>
+                        <h2>Help Us Scale Our Impact</h2>
+                        <p>
+                            Your support allows us to reach more communities and drive the
+                            structural changes needed for a safer national safeguarding system.
                         </p>
+                        <Link href="/support" className={styles.btnPrimary}>
+                            Become a Supporter
+                        </Link>
                     </div>
                 </div>
             </section>

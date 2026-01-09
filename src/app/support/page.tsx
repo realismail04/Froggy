@@ -2,85 +2,76 @@ import styles from '../Home.module.css';
 import Link from 'next/link';
 
 export default function Support() {
+    const abstractImg = "/supportive_community_abstract_1767979159722.png";
+
     return (
         <div className={styles.home}>
-            {/* Hero-like Intro */}
-            <section className={styles.hero} style={{ minHeight: '40vh', padding: '10rem 0 5rem' }}>
-                <div className="container">
-                    <div className={styles.heroContent}>
-                        <h1 className="text-calm">Support Our Mission</h1>
-                        <p style={{ fontSize: '1.4rem' }}>
-                            Building safer pathways for children through survivor-led reform.
-                        </p>
-                    </div>
+            {/* Premium Hero - Minimal */}
+            <section className={styles.hero} style={{ minHeight: '50vh', background: 'var(--safe-green-dark)' }}>
+                <div className={styles.heroOverlay} />
+                <div className={styles.heroContent}>
+                    <h1>Support Our Mission</h1>
+                    <p>
+                        Building safer pathways for children through survivor-led reform.
+                        Your partnership allows us to scale our impact nationally.
+                    </p>
                 </div>
             </section>
 
-            {/* Main Context */}
-            <section className={`${styles.introSection} ${styles.voiceBoxSection}`}>
-                <div className="container">
+            {/* Intro Split */}
+            <section className={`${styles.section} ${styles.voiceBoxSection}`}>
+                <div className={styles.container}>
                     <div className={styles.sectionContent}>
-                        <p>
-                            Froggy’s Voice Box CIC is a survivor-led organisation committed to transforming how
-                            children show abuse and how professionals respond. As a Community Interest Company,
-                            we rely on grants, partnerships, and public support to deliver our projects.
-                        </p>
-                        <p>
-                            Your support strengthens our reform work, maintains our resource hub, and directly
-                            funds community initiatives like the Safeguarding Van.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Donate Section */}
-            <section className={`${styles.introSection} ${styles.lawSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent} style={{ textAlign: 'center' }}>
-                        <h2>Donations & Crowdfunding</h2>
-                        <p>
-                            Public support helps us sustain our work and grow our impact.
-                            Every contribution supports survivor-led safeguarding initiatives.
-                        </p>
-                        <div style={{ marginTop: '3rem' }}>
-                            <button className={styles.btnHero} style={{ border: 'none', cursor: 'pointer' }}>
-                                Donate via Crowdfunder
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Other ways to help */}
-            <section className={`${styles.introSection} ${styles.voiceBoxSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
-                            <div style={{ padding: '2.5rem', background: 'var(--white)', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-sm)' }}>
-                                <h3 style={{ color: 'var(--calm-blue)', marginBottom: '1rem' }}>Grant Funding</h3>
-                                <p>We work with funders and trusts who share our commitment. Partnerships help us expand our community projects and deliver training.</p>
-                            </div>
-                            <div style={{ padding: '2.5rem', background: 'var(--white)', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-sm)' }}>
-                                <h3 style={{ color: 'var(--safe-green-dark)', marginBottom: '1rem' }}>Volunteering</h3>
-                                <p>We welcome support from individuals with skills in design, outreach, safeguarding, and community engagement.</p>
+                        <div className={styles.textContent}>
+                            <h2>Sustainable Social Impact</h2>
+                            <p>
+                                Froggy’s Voice Box CIC is a survivor-led organisation committed to
+                                transforming safeguarding standards. As a Community Interest Company,
+                                we reinvest every resource into protecting children.
+                            </p>
+                            <div className={styles.traumaAccent}>
+                                Your support maintains our resource hub and directly funds
+                                community initiatives like the Safeguarding Van.
                             </div>
                         </div>
+                        <div
+                            className={styles.imageBox}
+                            style={{ backgroundImage: `url(${abstractImg})` }}
+                        />
                     </div>
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className={styles.supportSection}>
-                <div className="container">
-                    <div className={styles.supportContent}>
-                        <h2>Interested in Partnering?</h2>
-                        <p>
-                            If you’re interested in exploring funding opportunities or skills-based
-                            volunteering, we’d love to hear from you.
-                        </p>
-                        <Link href="/contact" className={styles.btnGentle}>
-                            Contact Us
-                        </Link>
+            {/* Support Options Grid - Premium */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+                        <h2 style={{ fontSize: '3rem', color: 'var(--calm-blue-dark)' }}>How You Can Help</h2>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem' }}>
+
+                        <div style={{ padding: '3.5rem', background: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-premium)', textAlign: 'center' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '2rem' }}>🤝</div>
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>Grant Funding</h3>
+                            <p style={{ color: 'var(--neutral-600)', marginBottom: '2rem' }}>We work with trusts and funders to deliver scalable community projects and national reform.</p>
+                            <Link href="/contact" className={styles.btnSecondary} style={{ color: 'var(--calm-blue-dark)', borderColor: 'var(--calm-blue-dark)' }}>Partner with us</Link>
+                        </div>
+
+                        <div style={{ padding: '3.5rem', background: 'var(--calm-blue-dark)', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-premium)', textAlign: 'center', color: 'white' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '2rem' }}>⭐</div>
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'inherit' }}>Crowdfunding</h3>
+                            <p style={{ opacity: 0.8, marginBottom: '2rem' }}>Direct public support allows us to remain independent and responsive to survivor needs.</p>
+                            <button className={styles.btnPrimary}>Support on Crowdfunder</button>
+                        </div>
+
+                        <div style={{ padding: '3.5rem', background: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-premium)', textAlign: 'center' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '2rem' }}>🌱</div>
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>Volunteering</h3>
+                            <p style={{ color: 'var(--neutral-600)', marginBottom: '2rem' }}>Lend your expertise in design, outreach, or policy to strengthen the voice of survivors.</p>
+                            <Link href="/contact" className={styles.btnSecondary} style={{ color: 'var(--calm-blue-dark)', borderColor: 'var(--calm-blue-dark)' }}>Get involved</Link>
+                        </div>
+
                     </div>
                 </div>
             </section>

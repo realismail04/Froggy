@@ -3,42 +3,51 @@ import styles from '../../Home.module.css';
 export default function Cookies() {
     return (
         <div className={styles.home}>
-            {/* Hero-like Intro */}
-            <section className={styles.hero} style={{ minHeight: '30vh', padding: '10rem 0 5rem' }}>
-                <div className="container">
-                    <div className={styles.heroContent}>
-                        <h1 className="text-calm">Cookie Policy</h1>
-                        <p style={{ fontSize: '1.4rem' }}>
-                            Clear information about website cookies.
-                        </p>
-                    </div>
+            {/* Premium Hero - Minimal */}
+            <section className={styles.hero} style={{ minHeight: '40vh', background: 'var(--neutral-900)' }}>
+                <div className={styles.heroOverlay} />
+                <div className={styles.heroContent}>
+                    <h1>Cookie Policy</h1>
+                    <p>Clear information about website cookies.</p>
                 </div>
             </section>
 
-            {/* Main Content */}
-            <section className={`${styles.introSection} ${styles.voiceBoxSection}`}>
-                <div className="container">
-                    <div className={styles.sectionContent}>
+            {/* Policy Content */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.textContent} style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <h2>How We Use Cookies</h2>
                         <p>
-                            This policy explains how cookies are used on the Froggy’s Voice Box website.
-                            We use cookies to improve your experience and understand how our site is used.
+                            This website uses cookies to improve your experience while you
+                            navigate through the site. Cookies are small files stored on your
+                            device that help us provide a safer and more reliable service.
                         </p>
 
-                        <h2 style={{ marginTop: '3rem' }}>Essential Cookies</h2>
+                        <h3>Essential Cookies</h3>
                         <p>
-                            These are necessary for the website to function correctly, such as maintaining
-                            security and accessibility features.
+                            These cookies are essential for the operation of our website. They
+                            include, for example, cookies that enable you to log into secure
+                            areas or use the "Quick Exit" feature reliably.
                         </p>
 
-                        <h2 style={{ marginTop: '3rem' }}>Analytics Cookies</h2>
+                        <div className={styles.traumaAccent}>
+                            We do not use advertising or marketing cookies to track your
+                            activity across other websites.
+                        </div>
+
+                        <h3>Analytics Cookies</h3>
                         <p>
-                            We use basic analytics to understand which pages are most helpful to our visitors,
-                            helping us provide better resources.
+                            We use basic analytics tools to understand how our visitors interact
+                            with the site. This helps us identify which resources are the most
+                            helpful and where we can improve our guidance. All data is anonymised.
                         </p>
 
-                        <h2 style={{ marginTop: '3rem' }}>Management</h2>
+                        <h3>Managing Cookies</h3>
                         <p>
-                            You can manage or disable cookies through your browser settings at any time.
+                            You can set your browser to refuse all or some browser cookies, or to
+                            alert you when websites set or access cookies. If you disable or
+                            refuse cookies, please note that some parts of this website may
+                            become inaccessible or not function properly.
                         </p>
                     </div>
                 </div>
