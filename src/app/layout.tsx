@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import QuickEscape from "@/components/ui/QuickEscape";
+import ReportAbuse from "@/components/ui/ReportAbuse";
 
 const montserrat = Montserrat({
   variable: "--font-headings",
@@ -18,8 +19,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Froggy's Law CIC | Safeguarding Reform & Survivor-led Support",
-  description: "A survivor-led safeguarding reform project dedicated to transforming how children show abuse and how professionals respond.",
+  title: "Froggy's Voice Box | Safeguarding Hub & Survivor-led Support",
+  description: "A central, calm hub for safeguarding information, resources, and community connection. Rooted in emotional safety, clarity, and accessibility.",
 };
 
 export default function RootLayout({
@@ -33,6 +34,7 @@ export default function RootLayout({
         <QuickEscape />
         <Header />
         <main>{children}</main>
+        <ReportAbuse />
         <Footer />
       </body>
     </html>

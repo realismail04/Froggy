@@ -17,7 +17,7 @@ const Header = () => {
             <div className={`${styles.container} container`}>
                 <div className={styles.logo}>
                     <Link href="/">
-                        <span className={styles.logoText}>Froggy's Law <span className={styles.cic}>CIC</span></span>
+                        <span className={styles.logoText}>Froggy's Voice Box <span className={styles.cic}>CIC</span></span>
                     </Link>
                 </div>
 

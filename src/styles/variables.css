@@ -1,47 +1,54 @@
 :root {
-  /* Brand Colors - Nuanced Palette */
-  --calm-blue: #22577E;
-  --calm-blue-dark: #1a4463;
-  --calm-blue-light: #4c8cb1;
-  --calm-blue-soft: #e9f1f7;
+  /* Brand Colors - Softer, More Human Palette */
+  --calm-blue: #3E7DA9;
+  /* Slightly softer blue */
+  --calm-blue-dark: #22577E;
+  --calm-blue-light: #6DA9D2;
+  --calm-blue-soft: #F0F7FA;
 
-  --safe-green: #588157;
-  --safe-green-dark: #3a5a40;
-  --safe-green-light: #84a98c;
-  --safe-green-soft: #f0f7f1;
+  --safe-green: #7BA679;
+  /* Softer sage green */
+  --safe-green-dark: #588157;
+  --safe-green-light: #A3C5A1;
+  --safe-green-soft: #F5F9F5;
 
-  --soft-red: #C94B4B;
-  --gold-accent: #F0B941;
-  --quick-exit-red: #DC3545;
+  --soft-red: #D96C6C;
+  /* Less harsh red */
+  --gold-accent: #F4C45E;
+  /* Muted gold */
+  --quick-exit-red: #E35D5D;
 
-  --charcoal: #212529;
-  --slate-grey: #495057;
-  --off-white: #F8F9FA;
+  --charcoal: #343A40;
+  --slate-grey: #6C757D;
+  --off-white: #FAFBFB;
+  /* Cleaner, softer off-white */
   --white: #ffffff;
 
-  /* Gradients */
-  --grad-calm: linear-gradient(135deg, var(--calm-blue) 0%, var(--calm-blue-dark) 100%);
-  --grad-safe: linear-gradient(135deg, var(--safe-green) 0%, var(--safe-green-dark) 100%);
+  /* Gradients - Subdued */
+  --grad-calm: linear-gradient(135deg, var(--calm-blue-light) 0%, var(--calm-blue) 100%);
+  --grad-safe: linear-gradient(135deg, var(--safe-green-light) 0%, var(--safe-green) 100%);
   --grad-soft: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%);
 
   /* Typography */
   --font-headings: 'Montserrat', 'Poppins', sans-serif;
   --font-body: 'Open Sans', 'Lato', 'Roboto', sans-serif;
 
-  /* Elevate Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
-  --shadow-premium: 0 20px 40px rgba(34, 87, 126, 0.1);
+  /* Subdued Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --shadow-premium: 0 20px 60px rgba(62, 125, 169, 0.08);
 
   /* Spacing & Layout */
-  --container-max-width: 1200px;
-  --header-height: 90px;
-  --border-radius: 12px;
-  --border-radius-lg: 20px;
+  --container-max-width: 1100px;
+  /* Slightly tighter for intimacy */
+  --header-height: 80px;
+  --border-radius: 16px;
+  /* Rounder for friendliness */
+  --border-radius-lg: 32px;
 
-  /* Animation Tokens */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Animation Tokens - Subdued & Calm */
+  --transition-fast: 0.3s ease-out;
+  --transition-smooth: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-bounce: 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
